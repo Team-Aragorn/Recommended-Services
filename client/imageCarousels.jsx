@@ -1,18 +1,19 @@
 import React from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 class ImageCarousel extends React.Component {
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props);
 
-        this.state = {};
-    }
+    this.state = {};
+  }
 
-    render() { return (
-            <div>Hello Eli!</div>
-        )
-    }
-};
+  render() {
+    return (
+      <div>Hello Eli!</div>
+    );
+  }
+}
 
-ReactDOM.render(<ImageCarousel/>, document.getElementById('app'));
+ReactDOM.render(<ImageCarousel />, document.getElementById('app'));
