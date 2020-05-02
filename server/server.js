@@ -7,7 +7,26 @@ const PORT = 3003;
 app.use(express.static(`${__dirname}/../public`));
 app.use(express.json());
 
-app.get();
+app.get('/api/gameinfo', (req, res) => {
+  db.getGamesForRecommended((err, result) => {
+    if (err) {
+      res.status(404).end();
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
+
+app.get('/api/game', (req, res) => {
+  db.getGameForTopCarousel((err, result) => {
+    if (err) {
+      res.status(404).end();
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
+
 
 app.listen(PORT, () => {
   console.log(`Listening at port:${PORT}`);
