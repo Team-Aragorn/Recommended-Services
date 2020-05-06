@@ -21,14 +21,14 @@ db.once('open', () => {
   const ImageData = mongoose.model('ImageData', imageDataSchema);
 
   const randomMainImage = () => {
-    const random = Math.floor(Math.random() * Math.floor(18));
+    const random = Math.floor(Math.random() * Math.floor(17) + 1);
     return `https://better-game-start.s3.us-east-2.amazonaws.com/Recommended+Carousel+Images/${random}-170x170.jpg`;
   };
 
   const randomImages = () => {
     const result = [];
     for (let i = 0; i < 5; i++) {
-      const random = Math.floor(Math.random() * Math.floor(30));
+      const random = Math.floor(Math.random() * Math.floor(29) + 1);
       result.push(`https://better-game-start.s3.us-east-2.amazonaws.com/Zoom+Carousel+Images/${random}-370x370.jpg`);
     }
     return result;
