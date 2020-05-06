@@ -1,0 +1,38 @@
+.productCarousel {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  
+}
+
+.mainImage {
+  overflow: hidden;
+  order: 2;
+  align-self: center;
+}
+
+/* .mainImage img:hover {
+  transform: scale(1.2);
+  transform-origin: inherit;
+} */
+
+.imageBar {
+  display: flex;
+  flex-direction: column;
+  min-width: 77px;
+  flex-wrap: nowrap;
+  width: 10%;
+  order: 1;
+}
+
+.image {
+  width: 62%;
+  padding: 5px;
+  margin: 10px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+}
+
+.image:hover {
+  border-color: #DA3625;
+  ;
+}
