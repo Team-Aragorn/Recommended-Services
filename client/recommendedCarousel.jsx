@@ -1,18 +1,38 @@
 /* eslint-disable import/extensions */
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import axios from 'axios';
+import axios from 'axios';
+import GameInfo from './components/GameInfo.jsx';
+import Navigation from './components/Navigation.jsx';
 
 class RecommendedCarousel extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      games: [],
+    };
+  }
+
+  componentDidMount() {
+    axios.get('/api/game')
+      .then((data) => { this.updateGame(data.data); });
+  }
+
+  updateGame(data) {
+    this.setState({
+      games: data,
+    });
   }
 
   render() {
+    const { games } = this.state;
     return (
-      <div>Test</div>
+      <div className="recommendedSection">
+        <h1 className="title">RECOMMENDED FOR YOU</h1>
+        <GameInfo games={games} />
+        <Navigation games={games} />
+      </div>
     );
   }
 }

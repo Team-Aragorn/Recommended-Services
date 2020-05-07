@@ -14,11 +14,17 @@ db.once('open', () => {
     newPrice: Number,
     preOwnedPrice: Number,
     digitalPrice: Number,
+    console: String,
     mainImage: String,
     images: [String],
   });
 
   const ImageData = mongoose.model('ImageData', imageDataSchema);
+
+  const randomConsole = () => {
+    const consoles = ['Nintendo Switch', 'Playstation 4', 'Xbox One', 'PC'];
+    return consoles[Math.floor(Math.random() * Math.floor(4))];
+  };
 
   const randomMainImage = () => {
     const random = Math.floor(Math.random() * Math.floor(17) + 1);
@@ -42,6 +48,7 @@ db.once('open', () => {
         newPrice: 59.99,
         preOwnedPrice: 54.99,
         digitalPrice: 59.99,
+        console: randomConsole(),
         mainImage: randomMainImage(),
         images: randomImages(),
       };

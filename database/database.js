@@ -16,12 +16,13 @@ const ImageData = mongoose.model('ImageData', new Schema({
   newPrice: Number,
   preOwnedPrice: Number,
   digitalPrice: Number,
+  console: String,
   mainImage: String,
   images: [String],
 }), 'imagedatas');
 
 const getGamesForRecommended = (callback) => {
-  ImageData.aggregate([{ $sample: { size: 10 } }], (err, result) => {
+  ImageData.aggregate([{ $sample: { size: 12 } }], (err, result) => {
     if (err) {
       console.log('Error', err);
     } else {
