@@ -1,0 +1,38 @@
+.recommendedSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.title {
+  align-self: center;
+}
+
+.allgames {
+  display: flex;
+  flex-direction: row;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+.rowlable {
+}
+
+.rowprice {
+}
+
+.allbuttons {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}

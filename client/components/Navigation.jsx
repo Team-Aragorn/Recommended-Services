@@ -5,12 +5,12 @@ const Navigation = (props) => {
   games.splice(-3);
 
   return (
-    games.map((game) => {
-      return (
+    <div className="allbuttons">
+      {games.map((game) => (
         // eslint-disable-next-line no-underscore-dangle
-        <button key={game._id} type="button" value={game._id} />
-      );
-    })
+        <button className="button" key={game._id} type="button" value={game._id} />
+      ))}
+    </div>
   );
 };
 
