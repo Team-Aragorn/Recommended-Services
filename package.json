@@ -8,7 +8,8 @@
     "start:dev": "nodemon server/server.js --ignore 'client/' --ignore 'public/'",
     "start": "node server/server.js",
     "build": "webpack",
-    "seed": "node database/seed.js"
+    "seed": "node database/seed.js",
+    "test": "jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -22,18 +23,22 @@
   "homepage": "https://github.com/Team-Aragorn/Carousel-Images#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "babel-jest": "^26.0.1",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "mongodb": "^3.5.7",
     "mongoose": "^5.9.11",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.4",
     "babel-loader": "^8.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -41,7 +46,10 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "jest": "^26.0.1",
+    "jest-cli": "^26.0.1",
     "nodemon": "^2.0.3",
+    "supertest": "^4.0.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   }
