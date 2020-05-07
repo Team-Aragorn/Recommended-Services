@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('../database/database.js');
 
 const app = express();
-const PORT = 3003;
+const PORT = 3005;
 
 app.use(express.static(`${__dirname}/../public`));
 app.use(express.json());

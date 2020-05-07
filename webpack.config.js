@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './client/imageCarousels.jsx',
+  entry: './client/recommendedCarousel.jsx',
   output: {
     filename: 'bundle.js',
     path: `${__dirname}/public`,
