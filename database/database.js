@@ -20,44 +20,14 @@ const ImageData = mongoose.model('ImageData', new Schema({
   images: [String],
 }), 'imagedatas');
 
-
-const getGameForTopCarousel = (callback) => {
-  ImageData.countDocuments().exec((err, count) => {
-    if (err) {
-      console.log('Error Getting Carousel Images (count)', err);
-    } else {
-      const random = Math.floor(Math.random() * count);
-
-      ImageData.findOne().skip(random).exec((error, result) => {
-        if (error) {
-          console.log('Error Getting Carousel Images (findOne)', error);
-        } else {
-          callback(null, result);
-        }
-      });
-    }
-  });
-};
-
-
 const getGamesForRecommended = (callback) => {
-  ImageData.countDocuments().exec((err, count) => {
+  ImageData.aggregate([{ $sample: { size: 10 } }], (err, result) => {
     if (err) {
-      console.log('Error Getting Carousel Images (count)', err);
+      console.log('Error', err);
     } else {
-      const random = Math.floor(Math.random() * count);
-
-      ImageData.findOne().skip(random).exec((error, result) => {
-        if (error) {
-          console.log('Error Getting Carousel Images (findOne)', error);
-        } else {
-          callback(null, result);
-        }
-      });
+      callback(null, result);
     }
   });
 };
-
 
 module.exports.getGamesForRecommended = getGamesForRecommended;
-module.exports.getGameForTopCarousel = getGameForTopCarousel;
