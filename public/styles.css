@@ -34,9 +34,12 @@
 
 .allgames {
   display: grid;
-  grid-template-columns: repeat(12, 25% [col-start]);
-  overflow: hidden;
+  grid-template-columns: repeat(12, 25%);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
+
 .onegame {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.055);
   background-color: #ffffff;
@@ -45,6 +48,7 @@
   padding: 15px;
   padding-bottom: 40px;
   margin: 10px;
+  scroll-snap-align: end;
 }
 
 .image {
