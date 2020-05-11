@@ -31,7 +31,7 @@ class RecommendedCarousel extends React.Component {
       <div className="recommendedSection">
         <h1 className="title">RECOMMENDED FOR YOU</h1>
         <GameInfo games={games} />
-        <Navigation games={games} />
+        <Navigation />
       </div>
     );
   }
