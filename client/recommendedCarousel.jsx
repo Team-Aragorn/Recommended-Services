@@ -15,7 +15,7 @@ class RecommendedCarousel extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/game')
+    axios.get('/recommended')
       .then((data) => { this.updateGame(data.data); });
   }
 
@@ -37,4 +37,4 @@ class RecommendedCarousel extends React.Component {
   }
 }
 
-ReactDOM.render(<RecommendedCarousel />, document.getElementById('app'));
+ReactDOM.render(<RecommendedCarousel />, document.getElementById('recommended'));
