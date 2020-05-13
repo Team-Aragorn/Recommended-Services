@@ -1,5 +1,5 @@
 #app {
-  background-color: #f7f7f7;
+  background-color: #f6f6f8;
   font-family: Montserrat,sans-serif;
 }
 
@@ -38,6 +38,8 @@
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  max-width: 1220px;
+  justify-self: center;
 }
 
 .onegame {
