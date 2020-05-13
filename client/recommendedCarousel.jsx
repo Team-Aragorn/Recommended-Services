@@ -37,4 +37,4 @@ class RecommendedCarousel extends React.Component {
   }
 }
 
-ReactDOM.render(<RecommendedCarousel />, document.getElementById('app'));
+ReactDOM.render(<RecommendedCarousel />, document.getElementById('recommended'));
