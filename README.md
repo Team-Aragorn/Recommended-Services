@@ -1,7 +1,11 @@
 # Recommended Services
 > Product recomendation carousel. Displays item details such as price and triggers transitions on button click.
 
+![](Recommended-Carousel.gif)
 
+## Webpage Demo
+
+![](GameStart-Demo.gif)
 
 ## Requirements
 - Node 12.0.0
