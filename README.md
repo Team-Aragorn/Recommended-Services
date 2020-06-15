@@ -1,5 +1,8 @@
 # Recommended Services
-> Scroll Carousel with recommended games
+> Product recomendation carousel. Displays item details such as price and triggers transitions on button click.
+
+
+
 ## Requirements
 - Node 12.0.0
 - MongoDB 4.2.6
